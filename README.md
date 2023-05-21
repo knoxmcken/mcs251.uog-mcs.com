@@ -30,3 +30,4 @@ Use the navigation tab (to your left) or the content outline below to browse thr
   * [graphs-exercises.md](trees-and-graphs/graphs-exercises.md "mention")
   * [graphs-solutions-to-exercises.md](trees-and-graphs/graphs-solutions-to-exercises.md "mention")
 * [assignment-2](assignment-2/ "mention")
+* [heaps-and-hash-tables](heaps-and-hash-tables/ "mention)
