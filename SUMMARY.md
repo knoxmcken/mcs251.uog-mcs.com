@@ -29,4 +29,4 @@
     * [searching\_sorting\_algorithms.py](assignment-2/starter-files/searching\_sorting\_algorithms.py.md)
     * [trees.py](assignment-2/starter-files/trees.py.md)
     * [graphs.py](assignment-2/starter-files/graphs.py.md)
-* [Page 1](page-1.md)
+* [Heaps and Hash Tables](page-1.md)
