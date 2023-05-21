@@ -162,6 +162,134 @@ print("Sorted array is", arr)
 
 **Answers:**
 
-1. The Min-Heap implementation would be similar to the Max-Heap implementation with the logic of heapify and insertion operations reversed to maintain the Min-Heap property.
-2. To delete a specific element, you can replace it with the last element in the heap, reduce the heap size by 1, and then heapify the heap.
-3. For a Min-Heap based Heap Sort, you would build a Min-Heap in the first step, then repeatedly swap the root with the last element, reduce the heap size by 1, and heapify the root.
+Certainly, here are the Python code implementations for the exercises.
+
+**1.7 Exercises**
+
+1. Implement a Min-Heap in Python.
+
+
+
+Here's the Python implementation for a Min-Heap:
+
+```python
+import sys
+
+class MinHeap:
+
+    def __init__(self, maxsize):
+        self.maxsize = maxsize
+        self.size = 0
+        self.Heap = [0]*(self.maxsize + 1)
+        self.Heap[0] = -1 * sys.maxsize
+        self.FRONT = 1
+
+    def parent(self, i):
+        return i//2
+
+    def leftChild(self, i):
+        return 2 * i 
+
+    def rightChild(self, i):
+        return (2 * i) + 1
+
+    def isLeaf(self, i):
+        if i >= (self.size//2) and i <= self.size:
+            return True
+        return False
+
+    def swap(self, i, j):
+        self.Heap[i], self.Heap[j] = self.Heap[j], self.Heap[i]
+
+    def minHeapify(self, i):
+        if not self.isLeaf(i):
+            if (self.Heap[i] > self.Heap[self.leftChild(i)] or
+               self.Heap[i] > self.Heap[self.rightChild(i)]):
+
+                if self.Heap[self.leftChild(i)] < self.Heap[self.rightChild(i)]:
+                    self.swap(i, self.leftChild(i))
+                    self.minHeapify(self.leftChild(i))
+
+                else:
+                    self.swap(i, self.rightChild(i))
+                    self.minHeapify(self.rightChild(i))
+
+    def insert(self, element):
+        if self.size >= self.maxsize :
+            return
+        self.size += 1
+        self.Heap[self.size] = element
+
+        current = self.size
+
+        while self.Heap[current] < self.Heap[self.parent(current)]:
+            self.swap(current, self.parent(current))
+            current = self.parent(current)
+
+    def minHeap(self):
+        for i in range(self.size//2, 0, -1):
+            self.minHeapify(i)
+```
+
+2. Write a function to delete a specific element from a Heap.
+
+
+
+Deleting a specific element from a Heap can be a bit tricky as it's not a standard operation. The following function allows you to delete an element from a Max-Heap. The function works by replacing the element to be deleted with the maximum possible value (in Python, that's `sys.maxsize`), and then calling the `heapify` function at that index. Finally, it calls the `extractMax` function to remove the max element (which is the element to be deleted) from the heap.
+
+```python
+def deleteNode(heap, num):
+    toDelete = -1
+    for i in range(len(heap)):
+        if heap[i] == num:
+            toDelete = i
+            break
+
+    if toDelete == -1:
+        return heap
+
+    heap[toDelete] = sys.maxsize
+    maxHeapify(heap, toDelete)
+    extractMax(heap)
+
+    return heap
+```
+
+3. Modify the Heap Sort algorithm to work on a Min-Heap.
+
+
+
+A Min-Heap based Heap Sort would sort the array in descending order. The steps remain the same except that we build a Min-Heap in the first step instead of a Max-Heap. Here's the implementation:
+
+```python
+def minHeapify(arr, n, i):
+    smallest = i 
+    l = 2 * i + 1
+    r = 2 * i + 2 
+
+    if l < n and arr[smallest] > arr
+
+[l]:
+        smallest = l
+
+    if r < n and arr[smallest] > arr[r]:
+        smallest = r
+
+    if smallest != i:
+        arr[i], arr[smallest] = arr[smallest], arr[i] 
+        minHeapify(arr, n, smallest)
+
+def heapSort(arr):
+    n = len(arr)
+
+    for i in range(n//2 - 1, -1, -1):
+        minHeapify(arr, n, i)
+
+    for i in range(n-1, 0, -1):
+        arr[i], arr[0] = arr[0], arr[i]
+        minHeapify(arr, i, 0)
+
+arr = [12, 11, 13, 5, 6, 7]
+heapSort(arr)
+print("Sorted array is", arr)
+```
