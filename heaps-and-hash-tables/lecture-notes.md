@@ -162,9 +162,6 @@ print("Sorted array is", arr)
 
 **Answers:**
 
-Certainly, here are the Python code implementations for the exercises.
-
-**1.7 Exercises**
 
 1. Implement a Min-Heap in Python.
 
