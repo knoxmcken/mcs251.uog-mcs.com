@@ -29,5 +29,4 @@ Use the navigation tab (to your left) or the content outline below to browse thr
   * [graphs-answers-to-review-questions.md](trees-and-graphs/graphs-answers-to-review-questions.md "mention")
   * [graphs-exercises.md](trees-and-graphs/graphs-exercises.md "mention")
   * [graphs-solutions-to-exercises.md](trees-and-graphs/graphs-solutions-to-exercises.md "mention")
-
-[assignment-2](assignment-2/ "mention")
+* [assignment-2](assignment-2/ "mention")
