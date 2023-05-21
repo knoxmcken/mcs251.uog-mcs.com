@@ -30,4 +30,4 @@
     * [trees.py](assignment-2/starter-files/trees.py.md)
     * [graphs.py](assignment-2/starter-files/graphs.py.md)
 * [Heaps and Hash Tables](page-1/README.md)
-  * [Heaps](heaps-and-hash/lecture-notes.md)
+  * [Heaps](heaps-and-hash-tables/lecture-notes.md)
