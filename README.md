@@ -16,8 +16,8 @@ Use the navigation tab (to your left) or the content outline below to browse thr
   * [solutions.md](searching-and-sorting-algorithms/solutions.md "mention")
 * [stacks-and-queues](stacks-and-queues/ "mention")
   * [lecture-notes-stacks-and-queues.md](stacks-and-queues/lecture-notes-stacks-and-queues.md "mention")
-  * &#x20;[exercises-stacks-and-queues.md](stacks-and-queues/exercises-stacks-and-queues.md "mention")
-  * &#x20;[exercise-solutions-stacks-and-queues.md](stacks-and-queues/exercise-solutions-stacks-and-queues.md "mention")
+  * [exercises-stacks-and-queues.md](stacks-and-queues/exercises-stacks-and-queues.md "mention")
+  * [exercise-solutions-stacks-and-queues.md](stacks-and-queues/exercise-solutions-stacks-and-queues.md "mention")
 * [trees-and-graphs](trees-and-graphs/ "mention")
   * [lecture-notes-trees.md](trees-and-graphs/lecture-notes-trees.md "mention")
   * [review-questions-trees.md](trees-and-graphs/review-questions-trees.md "mention")
@@ -30,4 +30,4 @@ Use the navigation tab (to your left) or the content outline below to browse thr
   * [graphs-exercises.md](trees-and-graphs/graphs-exercises.md "mention")
   * [graphs-solutions-to-exercises.md](trees-and-graphs/graphs-solutions-to-exercises.md "mention")
 * [assignment-2](assignment-2/ "mention")
-* [heaps-and-hash-tables](heaps-and-hash-tables/ "mention")
+*
