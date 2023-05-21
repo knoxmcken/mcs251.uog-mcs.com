@@ -29,5 +29,5 @@
     * [searching\_sorting\_algorithms.py](assignment-2/starter-files/searching\_sorting\_algorithms.py.md)
     * [trees.py](assignment-2/starter-files/trees.py.md)
     * [graphs.py](assignment-2/starter-files/graphs.py.md)
-* [Heaps and Hash Tables](heaps-and-hash-tables/README.md)
+* [🔑 Heaps and Hash Tables](heaps-and-hash-tables/README.md)
   * [Heaps](heaps-and-hash-tables/lecture-notes.md)
