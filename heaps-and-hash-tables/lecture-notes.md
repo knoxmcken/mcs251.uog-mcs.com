@@ -5,15 +5,15 @@ A **Heap** is a special type of binary tree where every parent node is either le
 
 Max-Heap: 
 
-\[
+$$
 \forall n, a[n] \geq a[2n+1] \quad and \quad a[n] \geq a[2n+2]
-\]
+$$
 
 Min-Heap:
 
-\[
+$$
 \forall n, a[n] \leq a[2n+1] \quad and \quad a[n] \leq a[2n+2]
-\]
+$$
 
 **8.2 Understanding the Heap Property**
 
@@ -21,15 +21,15 @@ The Heap data structure obeys a certain set of rules, known as Heap Property:
 
 - Max Heap Property: For every node i, the value of i is **less than or equal to** its parent value. This property should be true for every node in the binary tree, except the root node.
 
-\[
+$$
 \forall i > 0, \; a[\lfloor i/2 \rfloor] \geq a[i]
-\]
+$$
 
 - Min Heap Property: For every node i, the value of i is **greater than or equal to** its parent value. This property should be true for every node in the binary tree, except the root node.
 
-\[
+$$
 \forall i > 0, \; a[\lfloor i/2 \rfloor] \leq a[i]
-\]
+$$
 
 **8.3 Implementing a Heap in Python**
 
