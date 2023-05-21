@@ -1,9 +1,10 @@
+# Heaps
 
 **8.1 Introduction to Heaps**
 
 A **Heap** is a special type of binary tree where every parent node is either less than or equal to (Min-Heap) or greater than or equal to (Max-Heap) its child node(s). The most significant property of a heap is that it always maintains its status as a heap during insertions and deletions, and it is also complete, meaning all levels of the tree are fully filled except for the last level, which is filled from left to right.
 
-Max-Heap: 
+Max-Heap:
 
 $$
 \forall n, a[n] \geq a[2n+1] \quad and \quad a[n] \geq a[2n+2]
@@ -19,13 +20,13 @@ $$
 
 The Heap data structure obeys a certain set of rules, known as Heap Property:
 
-- Max Heap Property: For every node i, the value of i is **less than or equal to** its parent value. This property should be true for every node in the binary tree, except the root node.
+* Max Heap Property: For every node i, the value of i is **less than or equal to** its parent value. This property should be true for every node in the binary tree, except the root node.
 
 $$
 \forall i > 0, \; a[\lfloor i/2 \rfloor] \geq a[i]
 $$
 
-- Min Heap Property: For every node i, the value of i is **greater than or equal to** its parent value. This property should be true for every node in the binary tree, except the root node.
+* Min Heap Property: For every node i, the value of i is **greater than or equal to** its parent value. This property should be true for every node in the binary tree, except the root node.
 
 $$
 \forall i > 0, \; a[\lfloor i/2 \rfloor] \leq a[i]
@@ -86,11 +87,9 @@ class MaxHeap:
 
 In this section, we will look at the main operations that we can perform on a Heap data structure. These include:
 
-- **Insertion:** In a Heap, all new elements should be inserted at the next available position from left to right. After insertion, we need to ensure that the Heap property is not violated. This is done by comparing the inserted element with its parent and moving the inserted node up the heap until it is in the correct position.
-
-- **Deletion:** In a Heap, the deletion operation is performed at the root and replaces it with the last node in the Heap. The Heap property might be violated and needs to be maintained by moving the swapped node down the heap until it is in the correct position.
-
-- **Heapify:** This operation is used to maintain the Heap property. This is usually called after the deletion operation. This operation is performed recursively until the Heap property is maintained.
+* **Insertion:** In a Heap, all new elements should be inserted at the next available position from left to right. After insertion, we need to ensure that the Heap property is not violated. This is done by comparing the inserted element with its parent and moving the inserted node up the heap until it is in the correct position.
+* **Deletion:** In a Heap, the deletion operation is performed at the root and replaces it with the last node in the Heap. The Heap property might be violated and needs to be maintained by moving the swapped node down the heap until it is in the correct position.
+* **Heapify:** This operation is used to maintain the Heap property. This is usually called after the deletion operation. This operation is performed recursively until the Heap property is maintained.
 
 **8.5 Heap Sort**
 
@@ -135,12 +134,11 @@ heapSort(arr)
 print("Sorted array is", arr)
 ```
 
+**Review Questions**
 
-**1.6 Review Questions**
-
-1. What is a Heap? 
-2. What are Max-Heap and Min-Heap? 
-3. What is the significance of a Heap being a complete binary tree? 
+1. What is a Heap?
+2. What are Max-Heap and Min-Heap?
+3. What is the significance of a Heap being a complete binary tree?
 4. What is the Heap Property?
 5. How does Insertion operation work in a Heap?
 6. Explain the Heapify operation.
@@ -151,16 +149,12 @@ print("Sorted array is", arr)
 1. A Heap is a special tree-based data structure that satisfies the heap property.
 2. In a Max-Heap, for any given node I, the value of I is greater than or equal to the values of its children. In a Min-Heap, the value of I is less than or equal to the values of its children.
 3. Heap being a complete binary tree is significant for several reasons. It optimizes memory use and ensures efficient, predictable operations, like insertion and deletion, that perform in $O(\log n)$ time. This structure also simplifies implementation, especially when using arrays, and is crucial for applications like priority queues and certain algorithms. In essence, it enhances the heap's efficiency and usability in many algorithmic contexts.
-
 4. Heap property ensures that every parent node is either less than or equal to (Min-Heap) or greater than or equal to (Max-Heap) its child node(s).
 5. In Heap, new elements should be inserted at the next available position from left to right. After insertion, the heap property is maintained by comparing the inserted element with its parent and moving the inserted node up the heap until it is in the correct position.
 6. Heapify is an operation to maintain the Heap property. It is usually called after deletion. The operation is performed recursively until the Heap property is maintained.
 7. Heap Sort works by building a max heap from the input data, then repeatedly swaps the root element with the last element in the heap, reduces the heap size by 1 (removing the last element from the heap), and finally heapifies the root of the now smaller heap. The steps are repeated while the size of the heap is greater than 1.
 
-
-
-
-**8.9 Exercises**
+**Exercises**
 
 1. Implement a Min-Heap in Python.
 2. Write a function to delete a specific element from a Heap.
@@ -171,4 +165,3 @@ print("Sorted array is", arr)
 1. The Min-Heap implementation would be similar to the Max-Heap implementation with the logic of heapify and insertion operations reversed to maintain the Min-Heap property.
 2. To delete a specific element, you can replace it with the last element in the heap, reduce the heap size by 1, and then heapify the heap.
 3. For a Min-Heap based Heap Sort, you would build a Min-Heap in the first step, then repeatedly swap the root with the last element, reduce the heap size by 1, and heapify the root.
-
